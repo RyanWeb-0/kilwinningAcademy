@@ -21,6 +21,7 @@ body {
     padding: 10px 20px;
     list-style-type:none;
 	z-index: 99;
+	width: 100%;
 }
 
 .navbar .logo {
@@ -180,4 +181,5 @@ cursor:pointer;
 
 #qualificationTable {
 	border:1px solid black;
+
 }
