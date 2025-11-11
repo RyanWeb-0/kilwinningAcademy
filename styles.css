@@ -1,0 +1,169 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: #328CC1;
+    color: white;
+    display: flex;
+   /* justify-content: flex-start;*/
+    align-items: center;
+    padding: 10px 20px;
+    list-style-type:none;
+	z-index: 99;
+}
+
+.navbar .logo {
+    font-size: 1.5em;
+    display:block;
+    width:100px;
+    height:100px;
+	margin-right:75px;
+}
+
+.navbar .nav-links a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+	display:inline;
+	margin-right:20px;
+}
+.navbar-links{
+	float:left;
+}
+
+.navbar .nav-links a:hover {
+    color: #ddd;
+}
+
+/* Sidebar Styles */
+.container {
+    display: flex;
+}
+
+.sidebar {
+    width: 200px;
+    background-color: #083C5D;
+    color: white;
+    height: 200vh;
+    position: absolute;
+    top: 120px; /* Account for the navbar height */
+    left: 0;
+    padding-top: 20px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.sidebar ul li a:hover {
+    color: #ddd;
+}
+
+/* Main Content Styles */
+.main-content {
+    margin-left: 220px;
+    padding: 20px;
+    flex: 1;
+}
+
+.main-content h1 {
+    color: #333;
+}
+
+.main-content p {
+    color: #666;
+}
+
+.staff-images{
+	display:flex;
+}
+#school-image{
+	width:50%
+}
+.subject-button:active{
+	background-color:#72bcf7;
+	color:#F6D12B;
+}
+
+.subject-button{
+background-color:#328CC1;
+color:white;
+height:230px;
+width:230px;
+font-weight:bold;
+font-size:30px;
+border:none;
+border-radius:20px;
+margin:10px;
+margin-left:0px;
+padding-top:30px;
+transition:0.1s;
+}
+
+.subject-button:hover{
+
+background-color:#2a6da3;
+cursor:pointer;
+      
+}
+
+.tile_table{
+	border-collapse:collapse;
+}
+.tile_table td {
+  text-align: center;
+}
+
+.tile_image{
+  padding: 5px 5px 5px 5px;
+  margin: 5px 5px 5px 5px;
+  height:160px;
+  width:120px;
+}
+.tile_table{
+	align-self:center;
+	margin-left:300px;
+}
+
+.subjects td, th {
+	 padding-top: 10px;
+	 padding-bottom: 10px;
+	 padding-left: 15px;
+	 padding-right: 20px;
+	 
+}
+
+.subjects tr:nth-child(even) {
+	 background-color: #328CC1;
+}
+
+.subjects table {
+	border-spacing:0px;
+}
+
+#qualificationTable {
+	border:1px solid black;
+}
