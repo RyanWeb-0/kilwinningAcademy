@@ -185,8 +185,8 @@ cursor:pointer;
 }
 
 .headTeacherImg{
-  width:5vw;
-  height:5vh;
+  width:20vw;
+  height:20vw;
 }
 
 @media screen and (max-width: 500px) { 
@@ -204,9 +204,10 @@ cursor:pointer;
 
 	.headTeacherImg{
   		width:80vw;
-  		height:80vh;
+  		height:80vw;
 	}
 }
+
 
 
 
