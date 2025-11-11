@@ -183,3 +183,16 @@ cursor:pointer;
 	border:1px solid black;
 
 }
+
+
+
+@media screen and (max-width: 500px) { 
+	.navbar .logo {
+    display:none;
+	.sidebar{
+		display:none;
+	}
+}
+	
+}
+
