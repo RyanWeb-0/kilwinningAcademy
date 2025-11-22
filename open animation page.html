@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title> Kilwinning Academy Website </title>
+<script>
+
+function fadeInAnim(elem,startOp,endOp,time,frames){
+  let id = null;
+  let opIncr=(endOp-startOp)/frames;
+  let opacity=startOp;
+  function handler(){
+  clearInterval(id);
+  id = setInterval(frame, time/frames*1000);
+  function frame(){
+      if (endOp<= opacity) {
+        clearInterval(id);
+    } else {
+      console.log(opacity); 
+      opacity+=opIncr;
+      elem.style.opacity=opacity;
+    }
+
+    }
+  }handler();
+}
+
+
+function fadeInMoveAnim(elem,startPos,endPos,time,frames){
+let id = null;
+function myMove() {
+  let dx = (endPos[0]-startPos[0])/frames;
+  let dy=(endPos[1]-startPos[1])/frames;
+  let pos=startPos;
+  let opacity=0;
+  clearInterval(id);
+  id = setInterval(frame, time/frames*1000);
+  function frame() {
+    if (Math.round(pos[0])== Math.round(endPos[0])) {
+	console.log("END");
+      clearInterval(id);
+    } else {
+      opacity+=1/frames;
+      pos=[pos[0]+dx,pos[1]+dy];
+      elem.style.left = pos[0]  + 'px';
+      elem.style.top= pos[1]  + 'px';
+      elem.style.opacity=opacity;
+    }
+  }
+}myMove();
+}
+window.addEventListener("load", (event) => {
+   let img=document.getElementById("img2");
+   let text=document.getElementById("welcomeTxt");
+   let clickTxt=document.getElementById("clickTxt");
+   fadeInMoveAnim(img,[1000,1100],[500,500],1.5,100);
+   fadeInMoveAnim(text,[1,1],[400,437],1,100);
+   fadeInAnim(clickTxt,0,1,10,100);
+   
+});
+</script>
+<style>
+body{
+  box-sizing: border-box;
+  overflow:hidden;
+}
+.parent {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+.image1 {
+  position: relative;
+  top: 0;
+  left: 0;
+  height:100vh; 
+  width:100vw;
+  filter: blur(15px);
+}
+
+.image2 {
+  position: absolute;
+  
+}
+p{
+  position: absolute;
+  top:10px;
+  left:10px;
+  color:white;
+  font-family:Arial, sans-serif;
+  font-size:20px;
+}
+
+</style>
+</head>
+<body>
+<div class="parent">
+<img id="img1" class ="image1" src="../Images/school.jpeg">
+<a href="home page.html"> <img id="img2" class ="image2" src="../Images/schoolBadge.png"></a>
+<p id ="welcomeTxt"> WELCOME TO KILWINNING ACADEMY</p>
+<p id ="clickTxt" style="color:white;top:590px;left:700px;"> <==  CLICK BADGE TO ENTER WEBSITE</p>
+</div>
+</body>
+
+</html>
